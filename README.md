@@ -5,7 +5,7 @@ Browser extension for Firefox and Chromium that decodes [FESK](https://www.senso
 ## How it works
 
 1. Focus a text input on any web page
-2. Press **F9** (or click the extension icon)
+2. Press **F9** (Firefox) or **Ctrl+Shift+Y** (Chrome), or click the extension icon
 3. The popup opens and immediately starts recording from your microphone
 4. Play a FESK transmission from your Sensor Watch
 5. The extension auto-detects the end of the message, decodes it, pastes the text into the input field, and closes
