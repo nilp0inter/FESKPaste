@@ -29,15 +29,15 @@ jobs:
 
     - name: Zip Chrome extension
       working-directory: dist/chrome
-      run: zip -r ../../chirpypaste-chrome-${GITHUB_REF_NAME}.zip .
+      run: zip -r ../../feskpaste-chrome-${GITHUB_REF_NAME}.zip .
 
     - name: Zip Firefox extension
       working-directory: dist/firefox
-      run: zip -r ../../chirpypaste-firefox-${GITHUB_REF_NAME}.zip .
+      run: zip -r ../../feskpaste-firefox-${GITHUB_REF_NAME}.zip .
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          chirpypaste-chrome-*.zip
-          chirpypaste-firefox-*.zip
+          feskpaste-chrome-*.zip
+          feskpaste-firefox-*.zip

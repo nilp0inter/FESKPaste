@@ -117,6 +117,25 @@ h1 {
   background: hsl(217, 32%, 48%);
 }
 
+.preview {
+  margin-bottom: 8px;
+  padding: 8px;
+  background: hsl(217, 20%, 97%);
+  border: 1px solid hsl(217, 20%, 88%);
+  border-radius: 6px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.preview pre {
+  font-family: "SF Mono", "Consolas", "Liberation Mono", monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: hsl(217, 20%, 40%);
+  min-height: 1.2em;
+}
+
 .result {
   margin-top: 12px;
   padding: 8px;

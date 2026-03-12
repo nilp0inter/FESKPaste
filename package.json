@@ -1,7 +1,7 @@
 {
-  "name": "chirpypaste",
+  "name": "feskpaste",
   "version": "1.0.0",
-  "description": "Browser extension to decode Chirpy audio transmissions and paste into text fields",
+  "description": "Browser extension to decode FESK audio transmissions and paste into text fields",
   "license": "MIT",
   "private": true,
   "devDependencies": {

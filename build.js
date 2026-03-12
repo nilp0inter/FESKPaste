@@ -45,6 +45,9 @@ async function build(target) {
   // Copy static files
   copyFile("src/popup/popup.html", path.join(outDir, "popup.html"));
   copyFile("src/popup/popup.css", path.join(outDir, "popup.css"));
+  copyFile("src/options/options.html", path.join(outDir, "options.html"));
+  copyFile("src/options/options.css", path.join(outDir, "options.css"));
+  copyFile("src/options/options.js", path.join(outDir, "options.js"));
 
   // Copy manifest
   const manifestSrc = target === "firefox" ? "manifest.firefox.json" : "manifest.chrome.json";

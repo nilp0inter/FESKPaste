@@ -19,7 +19,7 @@ document.addEventListener("focusin", (e) => {
 }, true);
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-  if (msg.type !== "chirpypaste-insert") return;
+  if (msg.type !== "feskpaste-insert") return;
 
   const text = msg.text;
   const el = lastFocusedElement;
@@ -44,6 +44,13 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
       el.dispatchEvent(new Event("input", {bubbles: true}));
       el.dispatchEvent(new Event("change", {bubbles: true}));
+    }
+
+    if (msg.sendEnter) {
+      el.dispatchEvent(new KeyboardEvent("keydown", {key: "Enter", code: "Enter", keyCode: 13, bubbles: true}));
+      el.dispatchEvent(new KeyboardEvent("keypress", {key: "Enter", code: "Enter", keyCode: 13, bubbles: true}));
+      el.dispatchEvent(new KeyboardEvent("keyup", {key: "Enter", code: "Enter", keyCode: 13, bubbles: true}));
+      if (el.form) el.form.requestSubmit();
     }
 
     sendResponse({success: true});

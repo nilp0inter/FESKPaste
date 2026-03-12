@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FESKPaste Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>FESKPaste Settings</h1>
+
+    <fieldset>
+      <legend>Modulation Mode</legend>
+      <label><input type="radio" name="mode" value="hybrid" checked> Hybrid (4FSK + BFSK)</label>
+      <label><input type="radio" name="mode" value="4fsk"> 4FSK only</label>
+      <label><input type="radio" name="mode" value="bfsk"> BFSK only</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Timeout</legend>
+      <label>
+        Seconds until auto-stop:
+        <input type="number" id="timeout" min="10" max="120" value="30">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>After Decode</legend>
+      <label><input type="checkbox" id="autoPaste" checked> Paste decoded text into focused input field</label>
+      <label class="sub-option"><input type="checkbox" id="sendEnter"> Send Enter after pasting</label>
+      <label><input type="checkbox" id="autoCopy" checked> Automatically copy decoded text to clipboard</label>
+      <label><input type="checkbox" id="autoClose" checked> Automatically close popup after decode</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Debug</legend>
+      <label><input type="checkbox" id="debug"> Enable debug output in popup</label>
+    </fieldset>
+
+    <button id="btn-save" class="btn btn-primary">Save</button>
+    <span id="save-status" class="save-status"></span>
+
+    <hr>
+
+    <fieldset>
+      <legend>Microphone</legend>
+      <p class="hint">Test your microphone and grant permission to the extension.</p>
+      <button id="btn-mic" class="btn btn-secondary">Test Microphone</button>
+      <div id="mic-result" class="mic-result hidden"></div>
+    </fieldset>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

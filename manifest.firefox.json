@@ -1,9 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "ChirpyPaste",
+  "name": "FESKPaste",
   "version": "1.0.0",
-  "description": "Decode Chirpy audio transmissions and paste into text fields",
-  "permissions": [],
+  "description": "Decode FESK audio transmissions and paste them into text fields",
+  "permissions": ["storage", "clipboardWrite"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -27,14 +31,14 @@
   "commands": {
     "_execute_action": {
       "suggested_key": {
-        "default": "Alt+Shift+C"
+        "default": "F9"
       },
-      "description": "Toggle ChirpyPaste recording"
+      "description": "Toggle FESKPaste recording"
     }
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "chirpypaste@nilp0inter.com",
+      "id": "feskpaste@nilp0inter.com",
       "strict_min_version": "109.0"
     }
   }
